@@ -9,7 +9,8 @@ public class PlayerControllerScript : MonoBehaviour
     public float gravity = 20.0f;
     public Camera playerCamera;
     public float lookSpeed = 2.0f;
-    public float lookXLimit = 45.0f;
+    public float lookXLimit = 30.0f;
+    private Rigidbody m_Rigidbody;
 
     CharacterController characterController;
     [HideInInspector]
@@ -23,6 +24,7 @@ public class PlayerControllerScript : MonoBehaviour
     {
         characterController = GetComponent<CharacterController>();
         rotation.y = transform.eulerAngles.y;
+        m_Rigidbody = GetComponent<Rigidbody>();
 
         // Lock and hide the cursor
         Cursor.lockState = CursorLockMode.Locked;

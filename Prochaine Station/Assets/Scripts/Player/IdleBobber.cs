@@ -26,17 +26,20 @@ public class IdleBobber : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
-        // Check if there's no input from the horizontal or vertical axes
-        if (Mathf.Approximately(horizontalInput, 0f) && Mathf.Approximately(verticalInput, 0f))
+        if (!PauseMenu.Instance.isPaused) // Check if the game is not paused
         {
-            timer += Time.deltaTime * idleBobbingSpeed;
-            float headBobYPosition = headBobber != null ? headBobber.GetHeadBobYPosition() : defaultPosY;
-            transform.localPosition = new Vector3(transform.localPosition.x, headBobYPosition + Mathf.Sin(timer) * bobbingAmount, transform.localPosition.z);
-        }
-        else
-        {
-            timer = 0f;
-            transform.localPosition = new Vector3(transform.localPosition.x, Mathf.Lerp(transform.localPosition.y, defaultPosY, Time.deltaTime * idleBobbingSpeed), transform.localPosition.z);
+            // Check if there's no input from the horizontal or vertical axes
+            if (Mathf.Approximately(horizontalInput, 0f) && Mathf.Approximately(verticalInput, 0f))
+            {
+                timer += Time.deltaTime * idleBobbingSpeed;
+                float headBobYPosition = headBobber != null ? headBobber.GetHeadBobYPosition() : defaultPosY;
+                transform.localPosition = new Vector3(transform.localPosition.x, headBobYPosition + Mathf.Sin(timer) * bobbingAmount, transform.localPosition.z);
+            }
+            else
+            {
+                timer = 0f;
+                transform.localPosition = new Vector3(transform.localPosition.x, Mathf.Lerp(transform.localPosition.y, defaultPosY, Time.deltaTime * idleBobbingSpeed), transform.localPosition.z);
+            }
         }
     }
 }
