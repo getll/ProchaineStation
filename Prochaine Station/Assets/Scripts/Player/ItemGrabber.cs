@@ -1,8 +1,7 @@
 using System;
 using UnityEngine;
 
-public class ItemGrabber : MonoBehaviour
-{
+public class ItemGrabber : MonoBehaviour {
     public float interactionRange = 3f;
     public float dropInteractionRange = 1f;
     public Transform itemHoldPosition;
@@ -17,108 +16,82 @@ public class ItemGrabber : MonoBehaviour
     private bool isInspecting = false;
     public PlayerControllerScript playerController;
 
-    void Update()
-    {
+    void Update() {
         // Check if the player is looking at a grabbable item
         RaycastHit hit;
-        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, interactionRange))
-        {
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, interactionRange)) {
             GrabbableItem grabbableItem = hit.collider.GetComponent<GrabbableItem>();
 
-            if (grabbableItem != null)
-            {
+            if (grabbableItem != null) {
                 // Toggle the outline based on player's proximity
                 grabbableItem.ToggleOutline(true);
 
                 // Check if the player presses E to pick up the item
-                if (Input.GetKeyDown(KeyCode.E) && heldItem == null && hit.collider.CompareTag("Grabbable"))
-                {
+                if (Input.GetKeyDown(KeyCode.E) && heldItem == null && hit.collider.CompareTag("Grabbable")) {
                     // Pick up the item
                     heldItem = hit.collider.GetComponent<Rigidbody>();
-                    if (heldItem != null)
-                    {
+                    if (heldItem != null) {
                         PickUpItem(heldItem);
                     }
                 }
-            }
-            else if (Input.GetKeyDown(KeyCode.E) && heldItem != null && hit.collider.CompareTag("Cart"))
-            {
+            } else if (Input.GetKeyDown(KeyCode.E) && heldItem != null && hit.collider.CompareTag("Cart")) {
                 // Drop item into cart
                 DropItemIntoCart();
                 ExitInspectMode();
                 heldItem = null;
-            }
-            else
-            {
+            } else {
                 // No grabbable item in sight or incorrect conditions, disable outline for all grabbable items
                 DisableOutlineForAllGrabbableItems();
             }
-        }
-        else
-        {
+        } else {
             // No grabbable item in sight, disable outline for all grabbable items
             DisableOutlineForAllGrabbableItems();
 
             // Check if the player wants to throw the held item
-            if (Input.GetKeyDown(KeyCode.E) && heldItem != null)
-            {
+            if (Input.GetKeyDown(KeyCode.E) && heldItem != null) {
                 ThrowItem();
                 ExitInspectMode();
                 heldItem = null;
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.I) && heldItem != null)
-        {
+        if (Input.GetKeyDown(KeyCode.I) && heldItem != null) {
             isInspecting = !isInspecting;
-            if (isInspecting)
-            {
+            if (isInspecting) {
                 EnterInspectMode();
-            }
-            else
-            {
+            } else {
                 ExitInspectMode();
             }
         }
 
-        if (heldItem != null)
-        {
-            if (!isInspecting)
-            {
+        if (heldItem != null) {
+            if (!isInspecting) {
                 float sway = Mathf.Sin(Time.time * swaySpeed) * swayAmount;
                 heldItem.transform.localPosition = new Vector3(0f, sway, 0f);
-            }
-            else
-            {
+            } else {
                 InspectItem();
             }
         }
     }
 
-    private void PickUpItem(Rigidbody itemRigidbody)
-    {
-        if (itemRigidbody.CompareTag("Grabbable"))
-        {
+    private void PickUpItem(Rigidbody itemRigidbody) {
+        if (itemRigidbody.CompareTag("Grabbable")) {
             itemRigidbody.isKinematic = true;
             itemRigidbody.detectCollisions = false;
             itemRigidbody.transform.SetParent(itemHoldPosition);
         }
     }
 
-    private void ThrowItem()
-    {
-        if (heldItem != null)
-        {
+    private void ThrowItem() {
+        if (heldItem != null) {
             heldItem.transform.SetParent(null);
             heldItem.isKinematic = false;
             heldItem.detectCollisions = true;
 
             RaycastHit hit;
-            if (Physics.Raycast(heldItem.transform.position, Vector3.down, out hit, interactionRange))
-            {
+            if (Physics.Raycast(heldItem.transform.position, Vector3.down, out hit, interactionRange)) {
                 float distanceToGround = hit.distance;
-                if (distanceToGround < 0.1f)
-                {
+                if (distanceToGround < 0.1f) {
                     throwForce *= 0.5f;
                 }
             }
@@ -129,23 +102,18 @@ public class ItemGrabber : MonoBehaviour
         }
     }
 
-    private void EnterInspectMode()
-    {
+    private void EnterInspectMode() {
         playerController.canMove = false;
     }
 
-    private void ExitInspectMode()
-    {
+    private void ExitInspectMode() {
         playerController.canMove = true;
     }
 
-    private void InspectItem()
-    {
-        if (inspectionPosition != null && heldItem != null)
-        {
+    private void InspectItem() {
+        if (inspectionPosition != null && heldItem != null) {
             Collider itemCollider = heldItem.GetComponent<Collider>();
-            if (itemCollider != null)
-            {
+            if (itemCollider != null) {
                 Vector3 pivot = itemCollider.bounds.center;
 
                 heldItem.transform.position = inspectionPosition.position;
@@ -160,34 +128,27 @@ public class ItemGrabber : MonoBehaviour
 
                 heldItem.transform.rotation = newRotation;
                 heldItem.transform.RotateAround(pivot, Vector3.forward, rotationZ);
-            }
-            else
-            {
+            } else {
                 Debug.LogWarning("Collider component not found on the held item.");
                 isInspecting = false;
             }
-        }
-        else
-        {
+        } else {
             Debug.LogWarning("Inspection position or held item is not set.");
             isInspecting = false;
         }
     }
 
-    private void DropItemIntoCart()
-    {
+    private void DropItemIntoCart() {
         heldItem.transform.SetParent(null);
         heldItem.isKinematic = false;
         heldItem.detectCollisions = true;
         heldItem.transform.position = cartDropPosition.position;
     }
 
-    private void DisableOutlineForAllGrabbableItems()
-    {
+    private void DisableOutlineForAllGrabbableItems() {
         GrabbableItem[] grabbableItems = FindObjectsOfType<GrabbableItem>();
 
-        foreach (GrabbableItem grabbableItem in grabbableItems)
-        {
+        foreach (GrabbableItem grabbableItem in grabbableItems) {
             grabbableItem.ToggleOutline(false);
         }
     }

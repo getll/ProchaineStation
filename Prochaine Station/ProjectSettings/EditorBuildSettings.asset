@@ -11,10 +11,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/PropsDemoScene.unity
     guid: 22fe20c72d9c2064c9da8dcab35a8220
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PlayTestScene.unity
     guid: 4245b1ac9e181764ab5a24a9cd0cd45c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainMenu.unity
     guid: 3a7eb2843d4d6784a91b00fb290354bc
+  - enabled: 1
+    path: Assets/Scenes/ApartmentLevel.unity
+    guid: 776ee6372f27b554581433b47e624b64
   m_configObjects: {}

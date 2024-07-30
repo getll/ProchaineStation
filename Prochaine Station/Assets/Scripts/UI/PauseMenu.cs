@@ -6,6 +6,7 @@ public class PauseMenu : MonoBehaviour
     public static PauseMenu Instance { get; private set; }
 
     public GameObject pauseMenuUI;
+    public GameObject mainUI;
     public GameObject playerObject;
     public GameObject audioContainer;
 
@@ -46,6 +47,7 @@ public class PauseMenu : MonoBehaviour
 
         // Activate/deactivate pause menu UI
         pauseMenuUI.SetActive(isPaused);
+        mainUI.SetActive(!isPaused);
 
         // Pause/unpause the game
         Time.timeScale = isPaused ? 0f : 1f;
@@ -60,24 +62,17 @@ public class PauseMenu : MonoBehaviour
             }
         }
 
-        // Iterate through audio sources and pause/unpause them
-        if (audioContainer != null)
+        // Iterate through all audio sources in the scene and pause/unpause them
+        AudioSource[] allAudioSources = FindObjectsOfType<AudioSource>();
+        foreach (AudioSource audioSource in allAudioSources)
         {
-            AudioListener listener = audioContainer.GetComponentInChildren<AudioListener>();
-            if (listener != null)
+            if (isPaused)
             {
-                AudioSource[] audioSources = audioContainer.GetComponentsInChildren<AudioSource>();
-                foreach (AudioSource audioSource in audioSources)
-                {
-                    if (isPaused)
-                    {
-                        audioSource.Pause();
-                    }
-                    else
-                    {
-                        audioSource.UnPause();
-                    }
-                }
+                audioSource.Pause();
+            }
+            else
+            {
+                audioSource.UnPause();
             }
         }
 
