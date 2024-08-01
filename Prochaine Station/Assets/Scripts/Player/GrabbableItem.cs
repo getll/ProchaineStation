@@ -1,15 +1,13 @@
 using UnityEngine;
+using System.Collections;
 
-public class GrabbableItem : MonoBehaviour
-{
+public class GrabbableItem : MonoBehaviour {
     private Outline outline;
 
-    void Start()
-    {
+    void Start() {
         // Find and store the Outline component
         outline = GetComponent<Outline>();
-        if (outline == null)
-        {
+        if (outline == null) {
             // If Outline component is not found, add it
             outline = gameObject.AddComponent<Outline>();
         }
@@ -19,11 +17,14 @@ public class GrabbableItem : MonoBehaviour
     }
 
     // Toggle the outline based on the specified state
-    public void ToggleOutline(bool state)
-    {
-        if (outline != null)
-        {
-            outline.enabled = state;
+    public void ToggleOutline(bool state) {
+        if (outline != null) {
+            StartCoroutine(ToggleOutlineCoroutine(state));
         }
+    }
+
+    private IEnumerator ToggleOutlineCoroutine(bool state) {
+        yield return new WaitForSeconds(0.1f);
+        outline.enabled = state;
     }
 }
