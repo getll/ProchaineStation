@@ -1,0 +1,157 @@
+Triangulation failed: System.NullReferenceException: Object reference not set to an instance of an object
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.FinalizationPolygon (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00036] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:197 
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.Triangulate (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00015] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:82 
+  at UnityEngine.ProBuilder.MeshOperations.Triangulation.Triangulate (System.Collections.Generic.IList`1[T] points, System.Collections.Generic.List`1[System.Int32]& indexes, System.Boolean convex) [0x00066] in .\Library\PackageCache\com.unity.probuilder@5.2.2\Runtime\MeshOperations\Triangulation.cs:149 
+Points not ordered correctly
+Points not ordered correctly
+Triangulation failed: Additional vertices were inserted.
+Points not ordered correctly
+Triangulation failed: Additional vertices were inserted.
+Points not ordered correctly
+Cannot Bevel Open Edges
+Triangulation failed: Additional vertices were inserted.
+Triangulation failed: Additional vertices were inserted.
+Points not ordered correctly
+Triangulation failed: Additional vertices were inserted.
+Points not ordered correctly
+Triangulation failed: System.NullReferenceException: Object reference not set to an instance of an object
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.FinalizationPolygon (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00036] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:197 
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.Triangulate (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00015] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:82 
+  at UnityEngine.ProBuilder.MeshOperations.Triangulation.Triangulate (System.Collections.Generic.IList`1[T] points, System.Collections.Generic.List`1[System.Int32]& indexes, System.Boolean convex) [0x00066] in .\Library\PackageCache\com.unity.probuilder@5.2.2\Runtime\MeshOperations\Triangulation.cs:149 
+Points not ordered correctly
+Triangulation failed: System.NullReferenceException: Object reference not set to an instance of an object
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.FinalizationPolygon (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00036] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:197 
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.Triangulate (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00015] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:82 
+  at UnityEngine.ProBuilder.MeshOperations.Triangulation.Triangulate (System.Collections.Generic.IList`1[T] points, System.Collections.Generic.List`1[System.Int32]& indexes, System.Boolean convex) [0x00066] in .\Library\PackageCache\com.unity.probuilder@5.2.2\Runtime\MeshOperations\Triangulation.cs:149 
+Points not ordered correctly
+Triangulation failed: System.NullReferenceException: Object reference not set to an instance of an object
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.FinalizationPolygon (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00036] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:197 
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.Triangulate (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00015] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:82 
+  at UnityEngine.ProBuilder.MeshOperations.Triangulation.Triangulate (System.Collections.Generic.IList`1[T] points, System.Collections.Generic.List`1[System.Int32]& indexes, System.Boolean convex) [0x00066] in .\Library\PackageCache\com.unity.probuilder@5.2.2\Runtime\MeshOperations\Triangulation.cs:149 
+Points not ordered correctly
+Triangulation failed: System.NullReferenceException: Object reference not set to an instance of an object
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.FinalizationPolygon (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00036] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:197 
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.Triangulate (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00015] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:82 
+  at UnityEngine.ProBuilder.MeshOperations.Triangulation.Triangulate (System.Collections.Generic.IList`1[T] points, System.Collections.Generic.List`1[System.Int32]& indexes, System.Boolean convex) [0x00066] in .\Library\PackageCache\com.unity.probuilder@5.2.2\Runtime\MeshOperations\Triangulation.cs:149 
+Points not ordered correctly
+Triangulation failed: Additional vertices were inserted.
+Points not ordered correctly
+Triangulation failed: Additional vertices were inserted.
+Points not ordered correctly
+Triangulation failed: Additional vertices were inserted.
+Points not ordered correctly
+Triangulation failed: Additional vertices were inserted.
+Points not ordered correctly
+Triangulation failed: System.NullReferenceException: Object reference not set to an instance of an object
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.FinalizationPolygon (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00036] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:197 
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.Triangulate (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00015] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:82 
+  at UnityEngine.ProBuilder.MeshOperations.Triangulation.Triangulate (System.Collections.Generic.IList`1[T] points, System.Collections.Generic.List`1[System.Int32]& indexes, System.Boolean convex) [0x00066] in .\Library\PackageCache\com.unity.probuilder@5.2.2\Runtime\MeshOperations\Triangulation.cs:149 
+Points not ordered correctly
+Triangulation failed: System.NullReferenceException: Object reference not set to an instance of an object
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.FinalizationPolygon (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00036] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:197 
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.Triangulate (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00015] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:82 
+  at UnityEngine.ProBuilder.MeshOperations.Triangulation.Triangulate (System.Collections.Generic.IList`1[T] points, System.Collections.Generic.List`1[System.Int32]& indexes, System.Boolean convex) [0x00066] in .\Library\PackageCache\com.unity.probuilder@5.2.2\Runtime\MeshOperations\Triangulation.cs:149 
+Points not ordered correctly
+Triangulation failed: System.NullReferenceException: Object reference not set to an instance of an object
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.FinalizationPolygon (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00036] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:197 
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.Triangulate (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00015] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:82 
+  at UnityEngine.ProBuilder.MeshOperations.Triangulation.Triangulate (System.Collections.Generic.IList`1[T] points, System.Collections.Generic.List`1[System.Int32]& indexes, System.Boolean convex) [0x00066] in .\Library\PackageCache\com.unity.probuilder@5.2.2\Runtime\MeshOperations\Triangulation.cs:149 
+Points not ordered correctly
+Triangulation failed: System.NullReferenceException: Object reference not set to an instance of an object
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.FinalizationPolygon (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00036] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:197 
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.Triangulate (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00015] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:82 
+  at UnityEngine.ProBuilder.MeshOperations.Triangulation.Triangulate (System.Collections.Generic.IList`1[T] points, System.Collections.Generic.List`1[System.Int32]& indexes, System.Boolean convex) [0x00066] in .\Library\PackageCache\com.unity.probuilder@5.2.2\Runtime\MeshOperations\Triangulation.cs:149 
+Points not ordered correctly
+Triangulation failed: Additional vertices were inserted.
+Points not ordered correctly
+Triangulation failed: Additional vertices were inserted.
+Points not ordered correctly
+Triangulation failed: Additional vertices were inserted.
+Points not ordered correctly
+Triangulation failed: Additional vertices were inserted.
+Points not ordered correctly
+Triangulation failed: System.NullReferenceException: Object reference not set to an instance of an object
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.FinalizationPolygon (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00036] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:197 
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.Triangulate (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00015] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:82 
+  at UnityEngine.ProBuilder.MeshOperations.Triangulation.Triangulate (System.Collections.Generic.IList`1[T] points, System.Collections.Generic.List`1[System.Int32]& indexes, System.Boolean convex) [0x00066] in .\Library\PackageCache\com.unity.probuilder@5.2.2\Runtime\MeshOperations\Triangulation.cs:149 
+Points not ordered correctly
+Triangulation failed: System.NullReferenceException: Object reference not set to an instance of an object
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.FinalizationPolygon (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00036] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:197 
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.Triangulate (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00015] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:82 
+  at UnityEngine.ProBuilder.MeshOperations.Triangulation.Triangulate (System.Collections.Generic.IList`1[T] points, System.Collections.Generic.List`1[System.Int32]& indexes, System.Boolean convex) [0x00066] in .\Library\PackageCache\com.unity.probuilder@5.2.2\Runtime\MeshOperations\Triangulation.cs:149 
+Points not ordered correctly
+Triangulation failed: System.NullReferenceException: Object reference not set to an instance of an object
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.FinalizationPolygon (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00036] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:197 
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.Triangulate (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00015] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:82 
+  at UnityEngine.ProBuilder.MeshOperations.Triangulation.Triangulate (System.Collections.Generic.IList`1[T] points, System.Collections.Generic.List`1[System.Int32]& indexes, System.Boolean convex) [0x00066] in .\Library\PackageCache\com.unity.probuilder@5.2.2\Runtime\MeshOperations\Triangulation.cs:149 
+Points not ordered correctly
+Triangulation failed: System.NullReferenceException: Object reference not set to an instance of an object
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.FinalizationPolygon (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00036] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:197 
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.Triangulate (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00015] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:82 
+  at UnityEngine.ProBuilder.MeshOperations.Triangulation.Triangulate (System.Collections.Generic.IList`1[T] points, System.Collections.Generic.List`1[System.Int32]& indexes, System.Boolean convex) [0x00066] in .\Library\PackageCache\com.unity.probuilder@5.2.2\Runtime\MeshOperations\Triangulation.cs:149 
+Points not ordered correctly
+Triangulation failed: Additional vertices were inserted.
+Points not ordered correctly
+Triangulation failed: Additional vertices were inserted.
+Points not ordered correctly
+Triangulation failed: Additional vertices were inserted.
+Points not ordered correctly
+Triangulation failed: Additional vertices were inserted.
+Points not ordered correctly
+Triangulation failed: System.NullReferenceException: Object reference not set to an instance of an object
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.FinalizationPolygon (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00036] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:197 
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.Triangulate (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00015] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:82 
+  at UnityEngine.ProBuilder.MeshOperations.Triangulation.Triangulate (System.Collections.Generic.IList`1[T] points, System.Collections.Generic.List`1[System.Int32]& indexes, System.Boolean convex) [0x00066] in .\Library\PackageCache\com.unity.probuilder@5.2.2\Runtime\MeshOperations\Triangulation.cs:149 
+Points not ordered correctly
+Triangulation failed: System.NullReferenceException: Object reference not set to an instance of an object
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.FinalizationPolygon (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00036] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:197 
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.Triangulate (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00015] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:82 
+  at UnityEngine.ProBuilder.MeshOperations.Triangulation.Triangulate (System.Collections.Generic.IList`1[T] points, System.Collections.Generic.List`1[System.Int32]& indexes, System.Boolean convex) [0x00066] in .\Library\PackageCache\com.unity.probuilder@5.2.2\Runtime\MeshOperations\Triangulation.cs:149 
+Points not ordered correctly
+Triangulation failed: System.NullReferenceException: Object reference not set to an instance of an object
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.FinalizationPolygon (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00036] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:197 
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.Triangulate (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00015] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:82 
+  at UnityEngine.ProBuilder.MeshOperations.Triangulation.Triangulate (System.Collections.Generic.IList`1[T] points, System.Collections.Generic.List`1[System.Int32]& indexes, System.Boolean convex) [0x00066] in .\Library\PackageCache\com.unity.probuilder@5.2.2\Runtime\MeshOperations\Triangulation.cs:149 
+Points not ordered correctly
+Triangulation failed: System.NullReferenceException: Object reference not set to an instance of an object
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.FinalizationPolygon (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00036] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:197 
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.Triangulate (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00015] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:82 
+  at UnityEngine.ProBuilder.MeshOperations.Triangulation.Triangulate (System.Collections.Generic.IList`1[T] points, System.Collections.Generic.List`1[System.Int32]& indexes, System.Boolean convex) [0x00066] in .\Library\PackageCache\com.unity.probuilder@5.2.2\Runtime\MeshOperations\Triangulation.cs:149 
+Points not ordered correctly
+Triangulation failed: Additional vertices were inserted.
+Points not ordered correctly
+Triangulation failed: Additional vertices were inserted.
+Points not ordered correctly
+Triangulation failed: Additional vertices were inserted.
+Points not ordered correctly
+Triangulation failed: Additional vertices were inserted.
+Points not ordered correctly
+Triangulation failed: System.NullReferenceException: Object reference not set to an instance of an object
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.FinalizationPolygon (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00036] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:197 
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.Triangulate (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00015] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:82 
+  at UnityEngine.ProBuilder.MeshOperations.Triangulation.Triangulate (System.Collections.Generic.IList`1[T] points, System.Collections.Generic.List`1[System.Int32]& indexes, System.Boolean convex) [0x00066] in .\Library\PackageCache\com.unity.probuilder@5.2.2\Runtime\MeshOperations\Triangulation.cs:149 
+Points not ordered correctly
+Triangulation failed: System.NullReferenceException: Object reference not set to an instance of an object
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.FinalizationPolygon (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00036] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:197 
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.Triangulate (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00015] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:82 
+  at UnityEngine.ProBuilder.MeshOperations.Triangulation.Triangulate (System.Collections.Generic.IList`1[T] points, System.Collections.Generic.List`1[System.Int32]& indexes, System.Boolean convex) [0x00066] in .\Library\PackageCache\com.unity.probuilder@5.2.2\Runtime\MeshOperations\Triangulation.cs:149 
+Points not ordered correctly
+Triangulation failed: System.NullReferenceException: Object reference not set to an instance of an object
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.FinalizationPolygon (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00036] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:197 
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.Triangulate (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00015] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:82 
+  at UnityEngine.ProBuilder.MeshOperations.Triangulation.Triangulate (System.Collections.Generic.IList`1[T] points, System.Collections.Generic.List`1[System.Int32]& indexes, System.Boolean convex) [0x00066] in .\Library\PackageCache\com.unity.probuilder@5.2.2\Runtime\MeshOperations\Triangulation.cs:149 
+Points not ordered correctly
+Triangulation failed: System.NullReferenceException: Object reference not set to an instance of an object
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.FinalizationPolygon (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00036] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:197 
+  at UnityEngine.ProBuilder.Poly2Tri.DTSweep.Triangulate (UnityEngine.ProBuilder.Poly2Tri.DTSweepContext tcx) [0x00015] in .\Library\PackageCache\com.unity.probuilder@5.2.2\External\Poly2Tri\Triangulation\Delaunay\Sweep\DTSweep.cs:82 
+  at UnityEngine.ProBuilder.MeshOperations.Triangulation.Triangulate (System.Collections.Generic.IList`1[T] points, System.Collections.Generic.List`1[System.Int32]& indexes, System.Boolean convex) [0x00066] in .\Library\PackageCache\com.unity.probuilder@5.2.2\Runtime\MeshOperations\Triangulation.cs:149 
+Points not ordered correctly
+Triangulation failed: Additional vertices were inserted.
+Points not ordered correctly
+Triangulation failed: Additional vertices were inserted.
+Points not ordered correctly
+Triangulation failed: Additional vertices were inserted.
+Points not ordered correctly
+Triangulation failed: Additional vertices were inserted.
+Points not ordered correctly
+Bevel Distance > Available Surface

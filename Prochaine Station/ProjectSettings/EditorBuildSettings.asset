@@ -5,7 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/RatStation.unity
+    guid: 7733bff7a25b89f4683c955e8f926a7d
+  - enabled: 1
+    path: Assets/Scenes/BuskerStation.unity
+    guid: e4d254ffcb8834b42a86a99b3f61ac4e
+  - enabled: 1
+    path: Assets/Scenes/CoworkerStation.unity
+    guid: fbfffef9f1f907f469b0a748362a3b9d
+  - enabled: 1
+    path: Assets/Scenes/GroceryStation.unity
+    guid: cb184a0f0c061854a9b2c0959e674dce
   m_configObjects: {}
