@@ -84,9 +84,8 @@ public class RecordPlayer : MonoBehaviour {
 
     private void OnDisable() {
         if (raycastCoroutine != null) {
-            StopCoroutine(raycastCoroutine); // Stop the coroutine when the object is disabled
-            Debug.Log("done");
+            StopCoroutine(raycastCoroutine);
         }
-        interactionText.enabled = false; // Hide interaction text when disabled
+        if (interactionText != null) interactionText.enabled = false;
     }
 }

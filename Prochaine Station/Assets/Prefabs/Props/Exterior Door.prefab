@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 6849504158505447921}
   - component: {fileID: 1547184878006176079}
   - component: {fileID: 5885424726700913603}
+  - component: {fileID: 906385275638830101}
   m_Layer: 0
   m_Name: Exterior Door
-  m_TagString: Untagged
+  m_TagString: SceneDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,9 +28,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 729870616613124157}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0000020861623, y: -0.7071067, z: 0.7071069, w: 0.0000020787118}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0.7071068, w: 0}
   m_LocalPosition: {x: -0.316, y: -0.118186265, z: -9.792985}
-  m_LocalScale: {x: -88.79346, y: -10.102293, z: -88.793434}
+  m_LocalScale: {x: -88.793465, y: -10.102293, z: -88.793434}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -106,3 +107,30 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2568079633300761278, guid: e84df2c54bc18b04b83e0c45c8a5689c, type: 3}
+--- !u!54 &906385275638830101
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729870616613124157}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

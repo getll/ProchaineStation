@@ -1,47 +1,39 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PauseMenu : MonoBehaviour
-{
+public class PauseMenu : MonoBehaviour {
     public static PauseMenu Instance { get; private set; }
 
     public GameObject pauseMenuUI;
     public GameObject mainUI;
     public GameObject playerObject;
-    public GameObject audioContainer;
-
     public bool isPaused = false;
+    public bool isLevelPausable = true;
 
-    private void Awake()
-    {
+    private void Awake() {
         // Ensure only one instance of PauseMenu exists
-        if (Instance == null)
-        {
+        if (Instance == null) {
             Instance = this;
-        }
-        else
-        {
+        } else {
             Destroy(gameObject);
         }
     }
 
-    private void Start()
-    {
+    private void Start() {
         // Hide the pause menu UI initially
         pauseMenuUI.SetActive(false);
     }
 
-    private void Update()
-    {
+    private void Update() {
         // Toggle pause menu on/off when the pause key is pressed
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
+        if (Input.GetKeyDown(KeyCode.Escape)) {
             TogglePauseMenu();
         }
     }
 
-    public void TogglePauseMenu()
-    {
+    public void TogglePauseMenu() {
+        if (!isLevelPausable) return;
+
         // Toggle pause state
         isPaused = !isPaused;
 
@@ -53,54 +45,46 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = isPaused ? 0f : 1f;
 
         // Toggle movement script of the player object
-        if (playerObject != null)
-        {
+        if (playerObject != null) {
             PlayerControllerScript movementScript = playerObject.GetComponent<PlayerControllerScript>();
-            if (movementScript != null)
-            {
+            if (movementScript != null) {
                 movementScript.canMove = !isPaused;
             }
         }
 
         // Iterate through all audio sources in the scene and pause/unpause them
         AudioSource[] allAudioSources = FindObjectsOfType<AudioSource>();
-        foreach (AudioSource audioSource in allAudioSources)
-        {
-            if (isPaused)
-            {
+        foreach (AudioSource audioSource in allAudioSources) {
+            if (isPaused) {
                 audioSource.Pause();
-            }
-            else
-            {
+            } else {
                 audioSource.UnPause();
             }
         }
 
-
-        if (isPaused)
-        {
+        if (isPaused) {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-        }
-        else
-        {
+        } else {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
     }
 
-    public void Resume()
-    {
+    public void Resume() {
         TogglePauseMenu();
     }
 
-    public void QuitGame()
-    {
+    public void QuitGame() {
         Application.Quit();
+
+        // If in the Unity editor, stop playing
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
     }
 
-    public void MainMenu()
-    {
+    public void MainMenu() {
         TogglePauseMenu();
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;

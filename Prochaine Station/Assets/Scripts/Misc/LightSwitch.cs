@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using static RoomLightManager;
 
 public class LightSwitch : MonoBehaviour {
     public List<GameObject> spotLights; // List of spotlights to control
     public TMP_Text interactionText; // Reference to the Text element for interaction
-    public float rotationAngle = 180f; // Rotation angle for the light switch
 
     private bool lightsOn;
     private bool interactionEnabled = false; // Whether the interaction is enabled
@@ -22,14 +22,23 @@ public class LightSwitch : MonoBehaviour {
         playerCamera = Camera.main;
         interactionText.enabled = false;
         audioSource = GetComponent<AudioSource>();
-        StartCoroutine(CheckForRaycast()); // Start the coroutine for raycast checks
+    }
+
+    private void OnEnable() {
+        playerCamera = Camera.main;
+        interactionText.enabled = false;
+        audioSource = GetComponent<AudioSource>();
+    }
+
+    private void StartRaycast() {
+        StartCoroutine(CheckForRaycast());
     }
 
     private IEnumerator CheckForRaycast() {
         while (true) {
-            lightsOn = FindObjectOfType<RoomLightManager>().roomActiveStates[gameObject.name.Split("_")[0]];
+            lightsOn = FindObjectOfType<RoomLightManager>().GetRoomByName(gameObject.name.Split("_")[0]).isActive;
 
-            yield return new WaitForSeconds(0.1f); // Wait for 0.1 seconds before the next check
+            yield return new WaitForSeconds(0.1f);
 
             Ray ray = playerCamera.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -39,19 +48,18 @@ public class LightSwitch : MonoBehaviour {
             if (Physics.Raycast(ray, out hit)) {
                 if (hit.collider != null && hit.collider.gameObject == gameObject) {
                     interactionText.text = "TURN LIGHTS " + (lightsOn ? "OFF " : "ON ") + "(E)";
-                    currentInteractionEnabled = true; // This instance wants to enable interaction
+                    currentInteractionEnabled = true;
                 }
             }
 
             if (currentInteractionEnabled) {
-                interactionText.enabled = true; // Show the interaction text
-                anyInteractionEnabled = true; // At least one instance wants to enable interaction
+                interactionText.enabled = true;
+                anyInteractionEnabled = true;
                 interactionEnabled = true;
             } else {
-                interactionEnabled = false; // This instance does not want to enable interaction
+                interactionEnabled = false;
             }
 
-            // Check if any instance is currently enabling interaction
             anyInteractionEnabled = false;
             foreach (var lightSwitch in FindObjectsOfType<LightSwitch>()) {
                 if (lightSwitch.interactionEnabled) {
@@ -75,22 +83,8 @@ public class LightSwitch : MonoBehaviour {
 
     private void ToggleLights() {
         lightsOn = !lightsOn;
-        if (lightsOn && FindObjectOfType<SkyboxChanger>().interiorState == "Run-down") FindObjectOfType<LightFlicker>().RefreshLightList();
-        FindObjectOfType<RoomLightManager>().roomActiveStates[gameObject.name.Split("_")[0]] = lightsOn;
-        foreach (var light in spotLights) {
-            light.SetActive(lightsOn);
-
-            Renderer renderer = light.GetComponent<Transform>().parent.GetComponent<Renderer>();
-
-            if (renderer != null) {
-                if (lightsOn) {
-                    // Enable emission
-                    renderer.material.EnableKeyword("_EMISSION");
-                } else {
-                    // Disable emission
-                    renderer.material.DisableKeyword("_EMISSION");
-                }
-            }
-        }
+        Room currentRoom = FindObjectOfType<RoomLightManager>().GetRoomByName(gameObject.name.Split("_")[0]);
+        currentRoom.isActive = lightsOn;
+        SetLightsState(currentRoom.lights, lightsOn);
     }
 }

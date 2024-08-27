@@ -9,6 +9,7 @@ TagManager:
   - Cart
   - Door
   - Trigger
+  - SceneDoor
   layers:
   - Default
   - TransparentFX

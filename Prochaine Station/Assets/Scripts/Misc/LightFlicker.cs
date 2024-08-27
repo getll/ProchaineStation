@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
+using Random = UnityEngine.Random;
 
 public class LightFlicker : MonoBehaviour {
     public Transform parentGameObject; // Assign the parent GameObject in the inspector
@@ -9,33 +11,39 @@ public class LightFlicker : MonoBehaviour {
     public float minPauseDuration = 1.0f; // Minimum duration of pause
     public float maxPauseDuration = 3.0f; // Maximum duration of pause
     public float bladeRotationSpeed = 10.0f; // Speed at which blades rotate
+
+    [SerializeField]
     private List<Light> pointLights = new List<Light>();
     private List<Transform> fanBlades = new List<Transform>();
     private SkyboxChanger skyboxChanger;
 
+    public bool isTitle = false;
+
     void Start() {
-        skyboxChanger = FindObjectOfType<SkyboxChanger>();
-        RefreshLightList();
+        if (isTitle) {
+            skyboxChanger = FindObjectOfType<SkyboxChanger>();
+
+            RefreshLightList();
+        }
         FindAllFanBlades(parentGameObject);
     }
 
     public void RefreshLightList() {
         pointLights.Clear();
-        FindAllPointLights(parentGameObject);
+        FindAllLights(parentGameObject);
         StartFlickering();
     }
 
-    public void FindAllPointLights(Transform parent) {
+    public void FindAllLights(Transform parent) {
         foreach (Transform child in parent) {
             Light light = child.GetComponent<Light>();
-            if (light != null && light.type == LightType.Point) {
+            if (light != null && (light.type == LightType.Point || light.type == LightType.Spot)) {
                 pointLights.Add(light);
-                Debug.Log("Found point light: " + light.name);
             }
 
             // Recursively search in the child's children
             if (child.childCount > 0) {
-                FindAllPointLights(child);
+                FindAllLights(child);
             }
         }
     }
@@ -69,7 +77,7 @@ public class LightFlicker : MonoBehaviour {
 
     IEnumerator FlickerLight(Light light) {
         while (true) {
-            if (!(skyboxChanger.timeOfDay == "Night" && skyboxChanger.interiorState == "Run-down")) break;
+            if (skyboxChanger != null && !(skyboxChanger.timeOfDay == "Night" && skyboxChanger.interiorState == "Run-down")) break;
 
             if (light.gameObject.activeInHierarchy) {
                 light.enabled = !light.enabled; // Toggle the light's enabled state
@@ -83,6 +91,8 @@ public class LightFlicker : MonoBehaviour {
                         // Disable emission
                         renderer.material.DisableKeyword("_EMISSION");
                     }
+                } else {
+                    Debug.Log("could not work with emission!");
                 }
             }
 
