@@ -10,6 +10,7 @@ TagManager:
   - Door
   - Trigger
   - SceneDoor
+  - Blocker
   layers:
   - Default
   - TransparentFX
