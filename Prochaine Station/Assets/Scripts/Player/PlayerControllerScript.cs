@@ -32,9 +32,9 @@ public class PlayerControllerScript : MonoBehaviour {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
-        isModel1Active = false;
-        model1.SetActive(false);
-        model2.SetActive(true);
+        isModel1Active = true;
+        model2.SetActive(false);
+        model1.SetActive(true);
     }
 
     void Update() {

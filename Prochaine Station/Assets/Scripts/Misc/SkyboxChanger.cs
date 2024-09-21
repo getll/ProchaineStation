@@ -109,6 +109,7 @@ public class SkyboxChanger : MonoBehaviour {
     }
 
     void ToggleInterior() {
+        if (interiorObjects.Length == 0) return;
         currentInteriorIndex = (currentInteriorIndex + 1) % interiorObjects.Length;
         UpdateInterior();
 
