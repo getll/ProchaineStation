@@ -2,14 +2,18 @@ using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
 
-public class PlayerControllerScript : MonoBehaviour
-{
+public class PlayerControllerScript : MonoBehaviour {
     public float speed = 7.5f;
     public float jumpSpeed = 8.0f;
     public float gravity = 20.0f;
     public Camera playerCamera;
     public float lookSpeed = 2.0f;
-    public float lookXLimit = 45.0f;
+    public float lookXLimit = 30.0f;
+    private Rigidbody m_Rigidbody;
+    public GameObject model1; // Reference to the first model
+    public GameObject model2; // Reference to the second model
+
+    private bool isModel1Active; // Track which model is currently active
 
     CharacterController characterController;
     [HideInInspector]
@@ -19,20 +23,22 @@ public class PlayerControllerScript : MonoBehaviour
     [HideInInspector]
     public bool canMove = true;
 
-    void Start()
-    {
+    void Start() {
         characterController = GetComponent<CharacterController>();
         rotation.y = transform.eulerAngles.y;
+        m_Rigidbody = GetComponent<Rigidbody>();
 
         // Lock and hide the cursor
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        isModel1Active = true;
+        model2.SetActive(false);
+        model1.SetActive(true);
     }
 
-    void Update()
-    {
-        if (characterController.isGrounded)
-        {
+    void Update() {
+        if (characterController.isGrounded) {
             // We are grounded, so recalculate move direction based on axes
             Vector3 forward = transform.TransformDirection(Vector3.forward);
             Vector3 right = transform.TransformDirection(Vector3.right);
@@ -40,8 +46,7 @@ public class PlayerControllerScript : MonoBehaviour
             float curSpeedY = canMove ? speed * Input.GetAxis("Horizontal") : 0;
             moveDirection = (forward * curSpeedX) + (right * curSpeedY);
 
-            if (Input.GetButton("Jump") && canMove)
-            {
+            if (Input.GetButton("Jump") && canMove) {
                 moveDirection.y = jumpSpeed;
             }
         }
@@ -55,13 +60,20 @@ public class PlayerControllerScript : MonoBehaviour
         characterController.Move(moveDirection * Time.deltaTime);
 
         // Player and Camera rotation
-        if (canMove)
-        {
+        if (canMove) {
             rotation.y += Input.GetAxis("Mouse X") * lookSpeed;
             rotation.x += -Input.GetAxis("Mouse Y") * lookSpeed;
             rotation.x = Mathf.Clamp(rotation.x, -lookXLimit, lookXLimit);
             playerCamera.transform.localRotation = Quaternion.Euler(rotation.x, 0, 0);
             transform.eulerAngles = new Vector2(0, rotation.y);
         }
+    }
+
+    public void SwitchModels() {
+        // Toggle the active state of the models
+        isModel1Active = !isModel1Active;
+
+        model1.SetActive(isModel1Active);
+        model2.SetActive(!isModel1Active);
     }
 }
